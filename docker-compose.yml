@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  hubmap-postgres:
+    container_name: hubmap-postgres
+    hostname: hubmap-postgres
+    build:
+      context: .
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_SUPERUSER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_SUPERUSER_PASSWORD:?err}
+    ports:
+      - "5433:5432"
+    volumes:
+      # Data persistence
+      - "./data:/var/lib/postgresql/data"
