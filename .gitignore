@@ -1,5 +1,8 @@
 # Mac
 .DS_Store
 
+# Mounted data fir
+data
+
 # log files in any path
 **/*.log
