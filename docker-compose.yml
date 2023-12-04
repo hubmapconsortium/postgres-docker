@@ -6,6 +6,9 @@ services:
     hostname: hubmap-postgres
     build:
       context: .
+    # Avoid accidentally creating zombie processes
+    init: true
+    # Specifying a restart policy to avoid downtime
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_SUPERUSER:-postgres}
