@@ -1,5 +1,7 @@
 FROM postgres:13.4
 
+LABEL description="Postgres 13.4 for HuBMAP"
+
 EXPOSE 5432
 
 # The postgis extension is needed for spatial-api
