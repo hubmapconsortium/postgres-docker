@@ -14,7 +14,7 @@ services:
       POSTGRES_USER: ${POSTGRES_SUPERUSER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_SUPERUSER_PASSWORD:?err}
     ports:
-      - "5433:5432"
+      - "5432:5432"
     user: ${HOST_UID:-1000}:${HOST_GID:-1000}
     volumes:
       # Data persistence
