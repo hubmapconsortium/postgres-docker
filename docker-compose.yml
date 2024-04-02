@@ -1,4 +1,4 @@
-version: '3.7'
+#version: '3.7'
 
 services:
   hubmap-postgres:
@@ -15,7 +15,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_SUPERUSER_PASSWORD:?err}
     ports:
       - "5432:5432"
-    user: ${HOST_UID:-1000}:${HOST_GID:-1000}
+    user: ${HOST_UID:-1004}:${HOST_GID:-1004}
     volumes:
       # Data persistence
       - "./data:/var/lib/postgresql/data"
